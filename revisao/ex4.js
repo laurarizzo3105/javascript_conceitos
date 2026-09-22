@@ -6,7 +6,7 @@ for (let i= 0; i < 4; i++){
     const material = {
         nome: entrada.question("Digite o nome do material: "),
         quantidade: entrada.questionInt("Digite a quantidade: "),
-        estoqueMinimo: entrada.questionInt("Digite o estoque minimo: ")1
+        estoqueMinimo: entrada.questionInt("Digite o estoque minimo: ")
     }
     materiais.push(material);
 }
