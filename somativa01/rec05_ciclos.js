@@ -1,10 +1,15 @@
-const entrada = require('readline-sync');
 
-const producao = entrada.questionInt('Digite a producao de produtos por ciclo: ');
+const entrada = require("readline-sync");
 
-let acumulado = 0;
+let soma = 0;
 
-for (let ciclo = 1; ciclo <= 12; ciclo++) {
-  acumulado += producao;
-  console.log('ciclo: ${ciclo} | producao acumulada: ${acumulado} ');
-};
+for (let i = 1; i <= 5; i++) {
+    const medicao = entrada.questionFloat(`Digite a medição ${i}: `);
+    soma += medicao;
+}
+
+const media = soma / 5;
+
+console.log("\n=== RESULTADO DAS MEDIÇÕES ===");
+console.log(`Soma das medições: ${soma}`);
+console.log(`Média final: ${media}`);
