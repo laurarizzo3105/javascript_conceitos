@@ -1,15 +1,24 @@
-const entrada = require("readline-sync");
-
-function calcularEficiencia(real, prevista) {
-    return (real / prevista) * 100;
+function calcularAproveitamento(util, total) {
+    return (util / total) * 100;
 }
 
-function classificarEficiencia(percentual) {
+function classificarAproveitamento(percentual) {
     if (percentual >= 90) {
-        return "META ATINGIDA";
-    } else if (percentual >= 70) {
-        return "ATENÇÃO";
-    } else {
-        return "ABAIXO DA META";
+        return "EXCELENTE";
     }
+    if (percentual >= 75) {
+        return "ADEQUADO";
+    }
+    return "REVISAR PROCESSO";
 }
+
+let total = prompt("Digite a quantidade total:");
+let util = prompt("Digite a quantidade útil:");
+
+let percentual = calcularAproveitamento(+util, +total);
+let classificacao = classificarAproveitamento(percentual);
+
+console.log("Total: " + total);
+console.log("Quantidade Útil: " + util);
+console.log("Percentual: " + percentual + "%");
+console.log("Classificação: " + classificacao);
