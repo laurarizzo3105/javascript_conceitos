@@ -13,14 +13,3 @@ function classificarEficiencia(percentual) {
         return "ABAIXO DA META";
     }
 }
-
-const producaoPrevista = entrada.questionFloat("Produção prevista: ");
-const producaoReal = entrada.questionFloat("Produção real: ");
-
-const eficiencia = calcularEficiencia(producaoReal, producaoPrevista);
-const classificacao = classificarEficiencia(eficiencia);
-
-console.log(`Produção prevista: ${producaoPrevista}`);
-console.log(`Produção real: ${producaoReal}`);
-console.log(`Eficiência: ${eficiencia.toFixed(2)}%`);
-console.log(`Classificação: ${classificacao}`);
